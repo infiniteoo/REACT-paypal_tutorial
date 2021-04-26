@@ -1,5 +1,6 @@
 import React from 'react'
 import benz from './imgs/benz.jpg'
+import PaypalButtons from './PaypalButton';
 
 class App extends React.Component {
     state = {
