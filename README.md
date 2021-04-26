@@ -1,6 +1,6 @@
 # react-paypal_tutorial
 
-I was having difficulting incorporating and understanding PayPal payment processing in an app I was working on, so I found this tutorial that I decided to work my way through:
+I was having difficulty incorporating and understanding PayPal payment processing in an app I was working on, so I found this tutorial that I decided to work my way through:
 
 https://medium.com/@devfemi/how-to-add-paypal-checkout-to-your-react-app-37d44c58a896
 
