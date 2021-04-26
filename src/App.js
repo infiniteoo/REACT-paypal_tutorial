@@ -21,7 +21,7 @@ class App extends React.Component {
     } else {
       return (
         <div className="outer-wrap">
-          <div className="xxx" style={{ borderColor: "5px solid black" }}>
+          <div className="xxx">
             <AppBar className="appBar" position="static" color="inherit">
               <Typography variant="h3" align="center">
                 Buy this Mercedes at a giveaway price (Super Cheap)

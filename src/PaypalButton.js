@@ -3,6 +3,9 @@ import ReactDOM from "react-dom";
 import scriptLoader from "react-async-script-loader";
 import Car from "./imgs/benz.jpg";
 import Spinner from "./Spinner";
+import { AppBar, Typography } from '@material-ui/core'
+import './App.css'
+import { Button } from '@material-ui/core';
 
  const CLIENT = {
    sandbox:
@@ -22,7 +25,10 @@ class PaypalButton extends React.Component {
     this.state = {
       showButtons: false,
       loading: true,
-      paid: false
+      paid: false,
+      payerID: "",
+      orderID: "",
+
     };
 
     window.React = React;
@@ -76,7 +82,7 @@ class PaypalButton extends React.Component {
       };
       console.log("Payment Approved: ", paymentData);
       
-      this.setState({ showButtons: false, paid: true });
+      this.setState({ showButtons: false, paid: true, payerID: data.payerID, orderID: data.orderID });
     });
   };
 
@@ -88,31 +94,48 @@ class PaypalButton extends React.Component {
         {loading && <Spinner />}
 
         {showButtons && (
-          <div>
-            <div>
-              <h2>Items: Mercedes G-Wagon</h2>
-              <h2>Total checkout Amount $200</h2>
-            </div>
-
+            <div className="outer-wrap">
+            <div className="xxx">
+              <AppBar className="appBar" position="static" color="inherit">
+                <Typography variant="h3" align="center">
+                  Please select your payment method:
+                </Typography>
+              </AppBar>
+              <h2 style={{ borderColor: "5px solid black" }}> </h2>
+            
+              
             <PayPalButton
               createOrder={(data, actions) => this.createOrder(data, actions)}
               onApprove={(data, actions) => this.onApprove(data, actions)}
             />
+            </div>
           </div>
+            
+         
+
+          
         )}
 
         {paid && (
-          <div className="main">
-            <img alt="Mercedes G-Wagon" src={Car} height="200" />
-            <h2>
-              Congrats! you just paid for that picture. Work a little harder and
-              you'll be able to afford the car itself{" "}
-              <span role="img" aria-label="emoji">
-                {" "}
-                😉
-              </span>
-            </h2>
+            <div className="outer-wrap">
+            <div className="xxx">
+              <AppBar className="appBar" position="static" color="inherit">
+                <Typography variant="h3" align="center">
+                  Success!  Congrats on your purchase.
+                </Typography>
+              </AppBar>
+              
+              <img alt="Mercedes G-Wagon" height="400px" src={Car} style={{marginTop: "10px"}} />
+              <h2> Confirmation details: </h2>
+              <h3>
+                <b>Order ID: ${this.state.orderID}</b><br/>
+                <b>Payer ID: ${this.state.payerID}</b>
+              </h3>
+             
+            </div>
           </div>
+            
+         
         )}
       </div>
     );

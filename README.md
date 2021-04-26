@@ -6,3 +6,4 @@ https://medium.com/@devfemi/how-to-add-paypal-checkout-to-your-react-app-37d44c5
 
 after this quick tutorial I feel like i have a much better understanding and now I should be able to get it working!
 
+![example_gif](./example.gif)
