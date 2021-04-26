@@ -19,9 +19,9 @@ class App extends React.Component {
         return (
           <div className="main">
             <h2> Buy this Mercedes at a giveaway price (Super Cheap) </h2>
-            <img alt="Mercedes G-Wagon" src={benz} />
+            <img alt="Mercedes G-Wagon" height="200px"src={benz} />
             <h3>
-              <b>$200</b>
+              <b>$1.00</b>
             </h3>
             <button onClick={this.showPaypalButtons}> Pay </button>
           </div>
