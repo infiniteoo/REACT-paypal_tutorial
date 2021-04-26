@@ -1,0 +1,48 @@
+.xxx {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.outer-wrap {
+    flex: 1 1 auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color:aliceblue;
+    
+
+}
+
+img {
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px;
+    
+}
+
+body {
+    font-size: 25px;
+    
+}
+
+.appBar {
+    border-radius: 15px;
+    margin: '30px 100px';
+    display: 'flex';
+    flex-direction: 'row';
+    justify-content: 'center';
+    align-items: 'center';
+    width: '100%';
+    border: '2px solid black';
+    padding: 10px;
+
+    
+  }

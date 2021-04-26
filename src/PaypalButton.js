@@ -75,6 +75,7 @@ class PaypalButton extends React.Component {
         orderID: data.orderID
       };
       console.log("Payment Approved: ", paymentData);
+      
       this.setState({ showButtons: false, paid: true });
     });
   };
@@ -102,7 +103,7 @@ class PaypalButton extends React.Component {
 
         {paid && (
           <div className="main">
-            <img alt="Mercedes G-Wagon" src={Car} />
+            <img alt="Mercedes G-Wagon" src={Car} height="200" />
             <h2>
               Congrats! you just paid for that picture. Work a little harder and
               you'll be able to afford the car itself{" "}
